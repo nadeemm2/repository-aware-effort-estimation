@@ -72,7 +72,7 @@ This project avoids using obvious post-estimation signals such as comments, chan
 Instead, the main experiment focuses on issue metadata that is generally available near issue creation or estimation time.
 
 ## Authors
-Nadeem Mohammed
-Ryan Muldoon
+- Nadeem Mohammed
+- Ryan Muldoon
 
-CS 527 Research Project, University of Illinois Urbana-Champaign
+CS 527, University of Illinois Urbana-Champaign
