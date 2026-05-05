@@ -10,6 +10,8 @@ We use the TAWOS dataset to build a story point prediction pipeline with two Cod
 2. **Repository-aware CodeBERT**  
    Uses the same issue text, but augments it with project and issue metadata such as repository name, issue type, priority, components, affected versions, and whether the description contains code-like content.
 
+Also tested against a LLM baseline using the Ollama LLaMa3 model locally one-shot prompting with using only issue descriptions.
+
 ## Motivation
 
 Story point estimation is commonly used in agile software development, but it is subjective and often inconsistent across teams and projects. Prior work such as Deep-SE, GPT2SP, and Llama3SP mainly focuses on issue title and description text. This project explores whether adding repository-aware issue context helps the model make better effort predictions.
@@ -60,10 +62,11 @@ The repository-aware model improves over the text-only model on the held-out tes
 | -------- | -------- | -------- | -------- |
 | Mean baseline | 3.9094 | -- | -- |
 | Median baseline | 3.0832| 21.13% | -- |
+| LLaMa3 baseline | 3.0308 | 22.47% | 1.7% |
 | CodeBERT text-only | 2.6718 | 31.66% | 13.34% |
 | CodeBERT repo-aware | 2.4798 | 36.57% | 19.57% |
 
-The repository-aware model achieves a relative improvement of about 7.19% over the text-only CodeBERT baseline.
+The repository-aware model achieves a relative improvement of about 17.87% over the LLaMa3 model and 7.19% over the text-only CodeBERT baseline.
 
 ## Notes
 
